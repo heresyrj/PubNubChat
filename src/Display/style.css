@@ -1,0 +1,21 @@
+.msgDisplay {
+	position: relative;
+
+	height: calc(100% - 64px - 64px);
+
+	margin-bottom: 40px;
+	margin-top: 64px;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	overflow: scroll;
+}
+
+.msgList {
+	display: flex;
+	flex-direction: column;
+}
+
+.msg {
+	font-size: 1.2em;
+}

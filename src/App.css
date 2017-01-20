@@ -1,0 +1,100 @@
+html,body {
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+#root, .root, .pusher {
+	height: 100%;
+}
+
+.username {
+    color: #fff;
+}
+
+$bp-small : 29.75em;
+$bp-med : 48em;
+$bp-large : 54.5em;
+$bp-xl : 76em;
+
+$cc-primary: #01BAEF;
+$cc-grey: #999;
+
+@lost flexbox flex;
+@custom-media --small-viewport (max-width: $bp-small);
+
+@for $i from 0 to 6 {
+	.mt$i { margin-top: calc($(i) * 8px); }
+	.mb$i { margin-bottom: calc($(i) * 8px); }
+    .ml$i { margin-left: calc($(i) * 8px); }
+    .mr$i { margin-right: calc($(i) * 8px); }
+}
+.mx {
+	margin-left: auto;
+	margin-right: auto;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.grid {
+    lost-center: 100% no-flex;
+}
+.colorPrimary {
+    color: $cc-primary;
+}
+.center {
+    text-align: center;
+}
+.regular {
+    font-weight: 400;
+}
+
+.loginWrap {
+    lost-center: 40%;
+	lost-align: center;
+
+	height: 100%;
+	
+    @media (--small-viewport) {
+        & {
+			lost-center: 100%;
+		}
+    }
+}
+
+.ui.form .ccInput.ccInput {
+    padding: 1em 1.2em;
+    border: none;
+    border-bottom: 1px solid rgba(34,36,38,.15);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1.6em;
+
+    &:hover, &:focus {
+        border-radius: 0;
+        border-color: $cc-primary;
+    }
+}
+
+.ui.button.ccBtnLogin.ccBtnLogin {
+    background-color: transparent;
+    color: $cc-primary;
+    font-size: 1.6em;
+}
+
+
+.ccBtnLogout, .ccBtnUsers {
+    color: $cc-grey;
+    font-size: 0.8em;
+    font-weight: 500;
+    background: none;
+    box-shadow: none;
+    border: none;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+        color: $cc-primary;
+    }
+}
+

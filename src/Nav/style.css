@@ -1,0 +1,28 @@
+
+$bp-small : 29.75em;
+@custom-media --small-viewport (max-width: $bp-small);
+.headerBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 48px;
+	padding: 16px;
+
+	font-size: 1.6em;
+	font-weight: 300;
+
+	border-bottom: 1px solid #d9d9d9;
+	z-index: 999;
+
+
+	@media (--small-viewport) {
+		h1 {
+			font-size: 0.6em;
+		}
+	}
+}
